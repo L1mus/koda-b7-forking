@@ -65,7 +65,8 @@ async function menu() {
                     await main(rl)
                     break;
                 case "9":
-                    toLowerCase()
+                    const word = await rl.question("Masukkan huruf : ")
+                    toLowerCase(word)
                     break;
                 default:
                     console.log("pilihan anda masih dalam tahap perkembangan\n")
