@@ -1,6 +1,8 @@
 import { createInterface } from "node:readline/promises";
 
 import sayHelloWorld from "./features/1_greeting.js";
+import isGenap from "./features/7_isGenap.js";
+import hitungDiskon from "./features/5_hitungDiskon.js";
 import luasSilinder from "./features/4_luasSilinder.js";
 import { main } from "./features/8_calculator.js";
 import isGenap from "./features/7_isGenap.js";
@@ -22,6 +24,7 @@ async function menu() {
         console.log("1. Hello World")
         console.log("3. Check is Palindrome Number")
         console.log("4. Hitung Luas Silinder")
+        console.log("5. Hitung Diskon")
         console.log("6. Konversi Celcius-Kelvin")
         console.log("7. Cek Ganjil Genap")
         console.log("8. Simple Calculator");
@@ -50,9 +53,17 @@ async function menu() {
                     const tinggi = await rl.question("Masukkan tinggi : ")
                     luasSilinder(jariJari,tinggi)
                     break;
+                case "5":
+                    const inputHarga = await rl.question("Masukkan harga: ");
+                    const inputDiskon = await rl.question("Masukkan diskonnya: ");
+                    const hargaAkhir = Number(inputHarga);
+                    const diskonAngka = Number(inputDiskon);
+                    const hasilHarga = hitungDiskon(hargaAkhir, diskonAngka);
+                    console.log("Jumlah Diskon:" + hasilHarga);
+                    break;
                 case "6":
-                    const celcius = await rl.question("Masukkan suhu Celcius : ")
-                    console.log(convertCtoK(celcius))                  
+                        const celcius = await rl.question("Masukkan suhu Celcius : ")
+                console.log(convertCtoK(celcius))                  
                     break;
                 case "7":
                     const angka = await rl.question("Masukkan angka : ")
