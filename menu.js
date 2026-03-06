@@ -41,19 +41,19 @@ async function menu() {
                 case "1":
                     sayHelloWorld()
                     break;
-                    case "4":
-                        const jariJari = await rl.question("Masukkan jari jari : ")
-                        const tinggi = await rl.question("Masukkan tinggi : ")
-                        luasSilinder(jariJari,tinggi)
-                        break;
-                    case "5":
-                        const inputHarga = await rl.question("Masukkan harga: ");
-                        const inputDiskon = await rl.question("Masukkan diskon: ");
-                        const hargaAkhir = Number(inputHarga);
-                        const diskonAngka = Number(inputDiskon);
-                        const hasilHarga = hitungDiskon(hargaAkhir, diskonAngka);
-                        console.log("Jumlah Diskon:" + hasilHarga);
-                        break;
+                case "4":
+                    const jariJari = await rl.question("Masukkan jari jari : ")
+                    const tinggi = await rl.question("Masukkan tinggi : ")
+                    luasSilinder(jariJari,tinggi)
+                    break;
+                case "5":
+                    const inputHarga = await rl.question("Masukkan harga: ");
+                    const inputDiskon = await rl.question("Masukkan diskon: ");
+                    const hargaAkhir = Number(inputHarga);
+                    const diskonAngka = Number(inputDiskon);
+                    const hasilHarga = hitungDiskon(hargaAkhir, diskonAngka);
+                    console.log("Jumlah Diskon:" + hasilHarga);
+                    break;
                 case "6":
                     convertCtoK(30)
                     break;
